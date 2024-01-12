@@ -7,23 +7,20 @@ function moveDodgerLeft() {
     if (left > 0) {
       dodger.style.left = `${left - 1}px`;
     }
-  }
-
-  function moveDodgerRight() {
-    const leftNumbers = dodger.style.left.replace("px", "");
+}
+function moveDodgerRight(){
+    const leftNumbers = dodger.style.left.replace("px","");
     const left = parseInt(leftNumbers, 10);
-  
-    const maxWidth = 360;
-  
-    if (left < maxWidth) {
-      dodger.style.left = `${left + 1}px`;
+
+    if(left < 360){
+        dodger.style.left = `${left + 1}px`;
     }
-  }
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowLeft") {
-      moveDodgerLeft();
+}
+document.addEventListener('keydown', function(e){
+    if(e.key ==="ArrowLeft"){
+        moveDodgerLeft();
     }
-    else if (e.key === "ArrowRight"){
+    else if(e.key === "ArrowRight"){
         moveDodgerRight();
     }
-  });
+});
